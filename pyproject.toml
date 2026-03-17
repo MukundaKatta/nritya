@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "nritya"
+version = "0.1.0"
+description = "Classical Dance Corrector"
+authors = [{name = "Mukunda Katta"}]
+requires-python = ">=3.10"
+dependencies = ["torch>=2.0", "numpy>=1.24", "pydantic>=2.0", "click>=8.0", "rich>=13.0"]
+
+[project.scripts]
+nritya = "nritya.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
